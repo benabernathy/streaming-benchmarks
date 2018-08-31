@@ -126,11 +126,43 @@ Licensed under the terms of the Apache License 2.0. Please see LICENSE file in t
 
     <modules>
         <module>streaming-benchmark-common</module>
-        <module>storm-benchmarks</module>
-        <module>flink-benchmarks</module>
-        <module>spark-benchmarks</module>
-        <module>apex-benchmarks</module>
     </modules>
+
+    <profiles>
+        <profile>
+            <id>apex</id>
+            <modules>
+                <module>apex-benchmarks</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>flink</id>
+            <modules>
+                <module>flink-benchmarks</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>spark</id>
+            <modules>
+                <module>spark-benchmarks</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>storm</id>
+            <modules>
+                <module>storm-benchmarks</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>all</id>
+            <modules>
+                <module>storm-benchmarks</module>
+                <module>flink-benchmarks</module>
+                <module>spark-benchmarks</module>
+                <module>apex-benchmarks</module>
+            </modules>
+        </profile>
+    </profiles>
 
     <build>
         <plugins>
